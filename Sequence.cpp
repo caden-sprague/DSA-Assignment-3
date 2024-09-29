@@ -59,7 +59,7 @@ namespace CS3358_FA2024
    sequence::sequence(const sequence& source): used(source.used), current_index(source.current_index), capacity(source.capacity)
    {
       data = new value_type[source.capacity];
-      
+
       // cout << "current_index: " << current_index << endl;
       // cout << "used: " << used << endl;
 
@@ -227,13 +227,14 @@ namespace CS3358_FA2024
    sequence& sequence::operator=(const sequence& source)
    {
       if(used != 0){
-         // delete [] data;
+         delete [] data;
       }
 
       used = source.used;
       current_index = source.current_index;
       capacity = source.capacity;
-
+      data = new value_type[capacity];
+      
       for(int i = 0; i < source.used; i++){
          data[i] = source.data[i];
       }

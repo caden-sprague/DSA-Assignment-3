@@ -529,12 +529,9 @@ int test5()
     cout << "Copy constructor test: for a sequence with cursor at tail." << endl;
     for (i = 2; i <= 2*original.DEFAULT_CAPACITY; i++)
         original.attach(i);
-    cout << "T" << endl;
     sequence copy2(original);
     original.start();
-    cout << "T" << endl;
     original.advance();
-    cout << "T" << endl;
     original.remove_current(); // Removes 2 from the original, but not the copy.
     if (!correct
         (copy2, 2*original.DEFAULT_CAPACITY, 2*original.DEFAULT_CAPACITY-1, items)
