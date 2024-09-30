@@ -1,0 +1,1 @@
+Copy constructor test: for a sequence with cursor near middle.

@@ -1,5 +1,5 @@
 a3a: Sequence.o Assign03Auto.o
-	g++ Sequence.o Assign03Auto.o -o a3a
+	g++ -Wall -Wextra Sequence.o Assign03Auto.o -o a3a
 Sequence.o: Sequence.cpp Sequence.h
 	g++ -Wall -ansi -pedantic -std=c++11 -c Sequence.cpp
 Assign03Auto.o: Assign03Auto.cpp Sequence.cpp Sequence.h
